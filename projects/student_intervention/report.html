@@ -11801,7 +11801,7 @@ This is a classification problem. In this case we have a labeled training datase
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11853,7 +11853,7 @@ This is a classification problem. In this case we have a labeled training datase
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">student_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -11867,7 +11867,7 @@ This is a classification problem. In this case we have a labeled training datase
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12033,14 +12033,14 @@ This is a classification problem. In this case we have a labeled training datase
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Calculate number of students</span>
 <span class="n">n_students</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO: Calculate number of features</span>
-<span class="n">n_features</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">n_features</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># Because we will not consider the &quot;passed&quot; as a feature</span>
 
 <span class="c1"># TODO: Calculate passing students</span>
 <span class="n">n_passed</span> <span class="o">=</span> <span class="n">student_data</span><span class="p">[</span><span class="n">student_data</span><span class="o">.</span><span class="n">passed</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -12070,7 +12070,7 @@ This is a classification problem. In this case we have a labeled training datase
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total number of students: 395
-Number of features: 31
+Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
 Graduation rate of the class: 67.09%
@@ -12096,7 +12096,7 @@ Graduation rate of the class: 67.09%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Extract feature columns</span>
@@ -12178,7 +12178,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12249,7 +12249,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import any additional functionality you may need here</span>
@@ -12355,7 +12355,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12427,7 +12427,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12436,9 +12436,9 @@ Testing set has 95 samples.
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
 
 <span class="c1"># TODO: Initialize the three models</span>
-<span class="n">clf_A</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">clf_B</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">clf_C</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">clf_A</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># since the algorithmic portion of KNN has no randomness, no random_state is allowed</span>
+<span class="n">clf_B</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">clf_C</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># TODO: Set up the training set sizes</span>
 <span class="n">X_train_100</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
@@ -12468,55 +12468,55 @@ Testing set has 95 samples.
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a KNeighborsClassifier using a training set size of 100. . .
-Trained model in 0.0048 seconds
-Made predictions in 0.0021 seconds.
+Trained model in 0.0008 seconds
+Made predictions in 0.0012 seconds.
 F1 score for training set: 0.7972.
-Made predictions in 0.0013 seconds.
+Made predictions in 0.0012 seconds.
 F1 score for test set: 0.7068.
 Training a KNeighborsClassifier using a training set size of 200. . .
-Trained model in 0.0007 seconds
-Made predictions in 0.0036 seconds.
+Trained model in 0.0006 seconds
+Made predictions in 0.0025 seconds.
 F1 score for training set: 0.8571.
 Made predictions in 0.0016 seconds.
 F1 score for test set: 0.7121.
 Training a KNeighborsClassifier using a training set size of 300. . .
 Trained model in 0.0009 seconds
-Made predictions in 0.0050 seconds.
+Made predictions in 0.0053 seconds.
 F1 score for training set: 0.8722.
-Made predictions in 0.0019 seconds.
+Made predictions in 0.0021 seconds.
 F1 score for test set: 0.7482.
 Training a RandomForestClassifier using a training set size of 100. . .
-Trained model in 0.0306 seconds
-Made predictions in 0.0014 seconds.
-F1 score for training set: 0.9844.
+Trained model in 0.0241 seconds
 Made predictions in 0.0010 seconds.
-F1 score for test set: 0.6462.
-Training a RandomForestClassifier using a training set size of 200. . .
-Trained model in 0.0216 seconds
-Made predictions in 0.0011 seconds.
-F1 score for training set: 0.9887.
+F1 score for training set: 0.9841.
 Made predictions in 0.0008 seconds.
-F1 score for test set: 0.7681.
+F1 score for test set: 0.7119.
+Training a RandomForestClassifier using a training set size of 200. . .
+Trained model in 0.0257 seconds
+Made predictions in 0.0012 seconds.
+F1 score for training set: 1.0000.
+Made predictions in 0.0009 seconds.
+F1 score for test set: 0.7761.
 Training a RandomForestClassifier using a training set size of 300. . .
-Trained model in 0.0216 seconds
-Made predictions in 0.0011 seconds.
-F1 score for training set: 0.9927.
-Made predictions in 0.0007 seconds.
-F1 score for test set: 0.7481.
+Trained model in 0.0247 seconds
+Made predictions in 0.0013 seconds.
+F1 score for training set: 0.9976.
+Made predictions in 0.0009 seconds.
+F1 score for test set: 0.7344.
 Training a LogisticRegression using a training set size of 100. . .
-Trained model in 0.0435 seconds
-Made predictions in 0.0086 seconds.
+Trained model in 0.0009 seconds
+Made predictions in 0.0002 seconds.
 F1 score for training set: 0.8571.
-Made predictions in 0.0003 seconds.
+Made predictions in 0.0001 seconds.
 F1 score for test set: 0.7612.
 Training a LogisticRegression using a training set size of 200. . .
-Trained model in 0.0018 seconds
-Made predictions in 0.0024 seconds.
+Trained model in 0.0015 seconds
+Made predictions in 0.0002 seconds.
 F1 score for training set: 0.8380.
 Made predictions in 0.0002 seconds.
 F1 score for test set: 0.7794.
 Training a LogisticRegression using a training set size of 300. . .
-Trained model in 0.0024 seconds
+Trained model in 0.0023 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 0.8381.
 Made predictions in 0.0002 seconds.
@@ -12557,21 +12557,21 @@ F1 score for test set: 0.7910.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0021</td>
 <td style="text-align:center">0.0013</td>
+<td style="text-align:center">0.0012</td>
 <td style="text-align:center">0.7972</td>
 <td style="text-align:center">0.7068</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0036</td>
-<td style="text-align:center">0.0016</td>
+<td style="text-align:center">0.0024</td>
+<td style="text-align:center">0.0013</td>
 <td style="text-align:center">0.8571</td>
 <td style="text-align:center">0.7121</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
-<td style="text-align:center">0.0050</td>
+<td style="text-align:center">0.0053</td>
 <td style="text-align:center">0.0019</td>
 <td style="text-align:center">0.8722</td>
 <td style="text-align:center">0.7482</td>
@@ -12591,24 +12591,24 @@ F1 score for test set: 0.7910.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0014</td>
-<td style="text-align:center">0.0010</td>
-<td style="text-align:center">0.9844</td>
-<td style="text-align:center">0.6462</td>
+<td style="text-align:center">0.0009</td>
+<td style="text-align:center">0.0007</td>
+<td style="text-align:center">0.9841</td>
+<td style="text-align:center">0.7119</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
 <td style="text-align:center">0.0011</td>
-<td style="text-align:center">0.0008</td>
-<td style="text-align:center">0.9887</td>
-<td style="text-align:center">0.7681</td>
+<td style="text-align:center">0.0016</td>
+<td style="text-align:center">1.0000</td>
+<td style="text-align:center">0.7761</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
+<td style="text-align:center">0.0017</td>
 <td style="text-align:center">0.0011</td>
-<td style="text-align:center">0.0007</td>
-<td style="text-align:center">0.9927</td>
-<td style="text-align:center">0.7481</td>
+<td style="text-align:center">0.9976</td>
+<td style="text-align:center">0.7344</td>
 </tr>
 </tbody>
 </table>
@@ -12625,14 +12625,14 @@ F1 score for test set: 0.7910.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0086</td>
-<td style="text-align:center">0.0003</td>
+<td style="text-align:center">0.0002</td>
+<td style="text-align:center">0.0001</td>
 <td style="text-align:center">0.8571</td>
 <td style="text-align:center">0.7612</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0024</td>
+<td style="text-align:center">0.0002</td>
 <td style="text-align:center">0.0002</td>
 <td style="text-align:center">0.8380</td>
 <td style="text-align:center">0.7794</td>
@@ -12730,12 +12730,13 @@ At a high level, logistic regression aims to predict a specific attribute such a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;gridSearchCV&#39; and &#39;make_scorer&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.grid_search</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span><span class="p">,</span><span class="n">make_scorer</span>
+<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">StratifiedShuffleSplit</span>
 
 <span class="c1"># TODO: Create the parameters list you wish to tune</span>
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;C&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="mo">01</span><span class="p">,</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span><span class="s1">&#39;penalty&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;l1&#39;</span><span class="p">,</span><span class="s1">&#39;l2&#39;</span><span class="p">],</span> <span class="s1">&#39;class_weight&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="s1">&#39;balanced&#39;</span><span class="p">]}</span>
@@ -12747,7 +12748,10 @@ At a high level, logistic regression aims to predict a specific attribute such a
 <span class="n">f1_scorer</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
 
 <span class="c1"># TODO: Perform grid search on the classifier using the f1_scorer as the scoring method</span>
-<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span><span class="n">scoring</span><span class="o">=</span><span class="n">f1_scorer</span><span class="p">)</span>
+<span class="n">binarize</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">value</span><span class="p">:</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">binarize</span><span class="p">)</span>
+<span class="n">cv</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=.</span><span class="mi">75</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span><span class="n">scoring</span><span class="o">=</span><span class="n">f1_scorer</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="n">cv</span><span class="p">)</span>
 
 <span class="c1"># TODO: Fit the grid search object to the training data and find the optimal parameters</span>
 <span class="n">grid_obj</span> <span class="o">=</span> <span class="n">grid_obj</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -12772,9 +12776,9 @@ At a high level, logistic regression aims to predict a specific attribute such a
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{&#39;penalty&#39;: &#39;l1&#39;, &#39;C&#39;: 0.1, &#39;class_weight&#39;: None}
-Made predictions in 0.0004 seconds.
+Made predictions in 0.0003 seconds.
 Tuned model has a training F1 score of 0.8267.
-Made predictions in 0.0002 seconds.
+Made predictions in 0.0001 seconds.
 Tuned model has a testing F1 score of 0.7917.
 </pre>
 </div>
@@ -12800,15 +12804,7 @@ Tuned model has a testing F1 score of 0.7917.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<ul>
-<li>For the final model, the performance in the training set is ~1% worse than the untuned model, and has nearly the same performance on the test set. The reason for this is probably twofold:<ul>
-<li>1) The tuning is focused on optimizing regularization parameters, which probably would not improve performance so much as it would limit overtraining, and we already chose logistic regression because the untuned model seemed the least overtrained.</li>
-<li>2) The other parameter we do a grid search over is whether or not to do class weighting to account for class imbalance when calculating the cost function, and since the classes are not heavily imbalanced, we don't seem to gain much here</li>
-</ul>
-</li>
-</ul>
-<p>I would have expected that tuning k for KNN or tuning the various features for the Random Forest may indeed have yielded more substantially different results than their untuned versions.</p>
-
+<h3 id="For-the-final-model,-the-performance-in-the-training-set-is-~1%-worse-than-the-untuned-model,-and-has-nearly-the-same-performance-on-the-test-set.-The-reason-for-this-is-probably-twofold:">For the final model, the performance in the training set is ~1% worse than the untuned model, and has nearly the same performance on the test set. The reason for this is probably twofold:<a class="anchor-link" href="#For-the-final-model,-the-performance-in-the-training-set-is-~1%-worse-than-the-untuned-model,-and-has-nearly-the-same-performance-on-the-test-set.-The-reason-for-this-is-probably-twofold:">&#182;</a></h3><h4 id="1)-The-tuning-is-focused-on-optimizing-regularization-parameters,-which-probably-would-not-improve-performance-so-much-as-it-would-limit-overtraining,-and-we-already-chose-logistic-regression-because-the-untuned-model-seemed-the-least-overtrained.">1) The tuning is focused on optimizing regularization parameters, which probably would not improve performance so much as it would limit overtraining, and we already chose logistic regression because the untuned model seemed the least overtrained.<a class="anchor-link" href="#1)-The-tuning-is-focused-on-optimizing-regularization-parameters,-which-probably-would-not-improve-performance-so-much-as-it-would-limit-overtraining,-and-we-already-chose-logistic-regression-because-the-untuned-model-seemed-the-least-overtrained.">&#182;</a></h4><h4 id="2)-The-other-parameter-we-do-a-grid-search-over-is-whether-or-not-to-do-class-weighting-to-account-for-class-imbalance-when-calculating-the-cost-function,-and-since-the-classes-are-not-heavily-imbalanced,-we-don't-seem-to-gain-much-here">2) The other parameter we do a grid search over is whether or not to do class weighting to account for class imbalance when calculating the cost function, and since the classes are not heavily imbalanced, we don't seem to gain much here<a class="anchor-link" href="#2)-The-other-parameter-we-do-a-grid-search-over-is-whether-or-not-to-do-class-weighting-to-account-for-class-imbalance-when-calculating-the-cost-function,-and-since-the-classes-are-not-heavily-imbalanced,-we-don't-seem-to-gain-much-here">&#182;</a></h4><h4 id="I-would-have-expected-that-tuning-k-for-KNN-or-tuning-the-various-features-for-the-Random-Forest-may-indeed-have-yielded-more-substantially-different-results-than-their-untuned-versions.">I would have expected that tuning k for KNN or tuning the various features for the Random Forest may indeed have yielded more substantially different results than their untuned versions.<a class="anchor-link" href="#I-would-have-expected-that-tuning-k-for-KNN-or-tuning-the-various-features-for-the-Random-Forest-may-indeed-have-yielded-more-substantially-different-results-than-their-untuned-versions.">&#182;</a></h4>
 </div>
 </div>
 </div>
